@@ -3,15 +3,10 @@ package implementation;
 import java.util.Observable;
 
 public abstract class MachineComponent extends Observable {
-    protected boolean broken = false;
 
-    public void setBroken() {
-        broken = false;
-    }
+    public abstract void setBroken();
 
-    public void repair() {
-        broken = false;
-    }
+    public abstract void repair();
 
     public abstract boolean isBroken();
 }
