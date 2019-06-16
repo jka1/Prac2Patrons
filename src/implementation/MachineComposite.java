@@ -13,11 +13,11 @@ public class MachineComposite extends MachineComponent implements Observer {
         components.add(mc);
         mc.addObserver(this);
         if (mc.isBroken()) brokenComponents += 1;
-        if (!broken && brokenComponents == 1) notifyChanges();
+        if (!isBroken && brokenComponents == 1) notifyChanges();
     }
 
     public boolean isBroken() {
-        return broken || brokenComponents > 0;
+        return isBroken || brokenComponents > 0;
     }
 
     public void update(Observable obs, Object arg) {
