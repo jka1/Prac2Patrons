@@ -30,8 +30,8 @@ public class MachineComponentTest {
 
     @Test
     public void machineCompositeTest() {
-        ((MachineComposite) mc1).addComponent(mc2);
         ((MachineComposite) mc2).addComponent(mc4);
+        ((MachineComposite) mc1).addComponent(mc2);
         ((MachineComposite) mc1).addComponent(mc3);
 
         assertFalse(mc1.isBroken());

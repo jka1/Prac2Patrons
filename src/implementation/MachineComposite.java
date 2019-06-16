@@ -39,6 +39,7 @@ public class MachineComposite extends MachineComponent implements Observer {
 
     private void repairedSubcomponent(MachineComponent mc) {
         brokenComponents -= 1;
+        if(brokenComponents == 0) isBroken = false;
         if (!isBroken()) {
             notifyChanges();
         }
